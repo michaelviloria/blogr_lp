@@ -1,0 +1,101 @@
+@import "variables";
+
+$primary: $color-white;
+$font-weight-normal: $overpass-sbold;
+$h2-font-size: 2.4rem;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+* {
+  font-family: $ff-overpass;
+}
+body {
+  color: $color-vd-blue;
+}
+
+// ----------> Styles Class
+.bg-home {
+  background: url("../images/bg-pattern-intro.svg"),
+  linear-gradient(140deg, $color-g-vl-red 0%, $color-g-l-red 100%);
+  background-size: 300%, 100%;
+  background-repeat: no-repeat;
+  background-position: -190px -180px, center;
+  background-attachment: fixed;
+}
+.bg-infrastructure {
+  background: url("../images/bg-pattern-circles.svg"),
+  linear-gradient(140deg, $color-g-vd-desatured-blue 0%, $color-g-vd-gray-blue 100%);
+  background-repeat: no-repeat;
+  background-size: 150%, 100%;
+  background-position: center -200px, center;
+}
+.bg-footer {
+  background-color: $color-vd-black-blue;
+  border-radius: 0 100px 0 0;
+}
+.border-infrastructure {
+  border-radius: 0 100px 0 100px;
+}
+.border-home {
+  border-radius: 0 0 0 100px;
+}
+.navbar-toggler {
+  border: none;
+  &:focus {
+    box-shadow: none;
+  }
+}
+.primary-font {
+  font-family: $ff-overpass;
+  font-weight: $overpass-sbold;
+}
+.secondary-font {
+  font-family: $ff-ubuntu;
+  font-weight: $ubuntu-regular;
+}
+.btn {
+  border-radius: 20px;
+  transition: transform .5s;
+  &.btn-primary {
+    color: $color-l-red;
+    &:focus {
+      box-shadow: none;
+    }
+    &:active {
+      transform: scale(.9);
+    }
+  }
+  &.btn-outline-primary {
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .bg-home {
+    background-position: -220px -220px, center;
+  }
+}
+@media screen and (min-width: 425px) {
+  .bg-home {
+    background-position: -260px -260px, center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bg-home {
+    background-size: 150%, 100%;
+    background-position: 60% 40%, center;
+  }
+  .bg-infrastructure {
+    background-size: 100%, 100%;
+    background-position: -200px 100%, center;
+  }
+}
+
+// ----------> Styles Page
+@import "home";
+@import "editor";
+@import "infrastructure";
+@import "end-section";
+@import "footer";

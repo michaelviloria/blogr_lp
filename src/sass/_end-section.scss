@@ -1,0 +1,35 @@
+.end-section {
+  text-align: center;
+  h3 {
+    margin: 20px 0 10px;
+  }
+  .illustration-laptop {
+    max-width: 500px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .end-section {
+    p {
+      text-align: left;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .end-section {
+    margin-top: 150px;
+    margin-bottom: 100px;
+    position: relative;
+    .illustration-laptop {
+      position: absolute;
+      max-width: none;
+      width: 800px;
+      top: calc(50% - (576px / 2));
+      right: 50%;
+    }
+  }
+}
